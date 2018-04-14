@@ -44,7 +44,7 @@
       {{ partial "footer.html" . }}
     </main>
 
-     {{ if and (.Site.GoogleAnalytics) (eq (getenv "HUGO_ENV") "production") }}
+     {{ if .Site.GoogleAnalytics }}
        {{ template "_internal/google_analytics_async.html" . }}
      {{ end }}
 
